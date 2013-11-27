@@ -1,0 +1,113 @@
+﻿Build started 11/21/2013 9:28:48 AM.
+     1>Project "D:\SDL_test\SDL_test\SDL_test.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Camera.cpp Canvas.cpp Sprite.cpp Sprite_scroller.cpp Stage.cpp main.cpp
+         main.cpp
+     1>d:\sdl_test\sdl_test\camera.h(18): error C2653: 'physics' : is not a class or namespace name
+     1>d:\sdl_test\sdl_test\camera.h(18): error C2146: syntax error : missing ';' before identifier 'vel'
+     1>d:\sdl_test\sdl_test\camera.h(18): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\sdl_test\sdl_test\stage.h(16): error C2065: 'Sprite_base' : undeclared identifier
+     1>d:\sdl_test\sdl_test\stage.h(16): error C2059: syntax error : '>'
+     1>d:\sdl_test\sdl_test\stage.h(16): error C2976: 'std::vector' : too few template arguments
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\vector(650) : see declaration of 'std::vector'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\vector(650) : see declaration of 'std::vector'
+     1>d:\sdl_test\sdl_test\stage.h(19): error C2065: 'Sprite_base' : undeclared identifier
+     1>d:\sdl_test\sdl_test\stage.h(19): error C2059: syntax error : '>'
+     1>d:\sdl_test\sdl_test\stage.h(19): error C2976: 'std::vector' : too few template arguments
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\vector(650) : see declaration of 'std::vector'
+     1>d:\sdl_test\sdl_test\sprite.h(78): error C2535: 'Sprite_base::Sprite_base(void)' : member function already defined or declared
+                 d:\sdl_test\sdl_test\sprite.h(48) : see declaration of 'Sprite_base::Sprite_base'
+         Stage.cpp
+     1>d:\sdl_test\sdl_test\camera.h(18): error C2653: 'physics' : is not a class or namespace name
+     1>d:\sdl_test\sdl_test\camera.h(18): error C2146: syntax error : missing ';' before identifier 'vel'
+     1>d:\sdl_test\sdl_test\camera.h(18): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\sdl_test\sdl_test\sprite.h(78): error C2535: 'Sprite_base::Sprite_base(void)' : member function already defined or declared
+                 d:\sdl_test\sdl_test\sprite.h(48) : see declaration of 'Sprite_base::Sprite_base'
+     1>d:\sdl_test\sdl_test\stage.cpp(15): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\sdl_test\sdl_test\stage.cpp(22): error C2143: syntax error : missing ';' before '}'
+     1>d:\sdl_test\sdl_test\stage.cpp(25): error C2511: 'void Stage::draw(float)' : overloaded member function not found in 'Stage'
+                 d:\sdl_test\sdl_test\stage.h(11) : see declaration of 'Stage'
+     1>d:\sdl_test\sdl_test\stage.cpp(27): error C3312: no callable 'begin' function found for type 'unknown'
+     1>d:\sdl_test\sdl_test\stage.cpp(27): error C3312: no callable 'end' function found for type 'unknown'
+     1>d:\sdl_test\sdl_test\stage.cpp(28): error C2065: 'iSprite' : undeclared identifier
+     1>d:\sdl_test\sdl_test\stage.cpp(28): error C2227: left of '->draw' must point to class/struct/union/generic type
+                 type is 'unknown-type'
+     1>d:\sdl_test\sdl_test\stage.cpp(52): error C2660: 'Stage::draw' : function does not take 1 arguments
+         Sprite_scroller.cpp
+     1>d:\sdl_test\sdl_test\camera.h(18): error C2653: 'physics' : is not a class or namespace name
+     1>d:\sdl_test\sdl_test\camera.h(18): error C2146: syntax error : missing ';' before identifier 'vel'
+     1>d:\sdl_test\sdl_test\camera.h(18): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\sdl_test\sdl_test\stage.h(16): error C2065: 'Sprite_base' : undeclared identifier
+     1>d:\sdl_test\sdl_test\stage.h(16): error C2059: syntax error : '>'
+     1>d:\sdl_test\sdl_test\stage.h(16): error C2976: 'std::vector' : too few template arguments
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\vector(650) : see declaration of 'std::vector'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\vector(650) : see declaration of 'std::vector'
+     1>d:\sdl_test\sdl_test\stage.h(19): error C2065: 'Sprite_base' : undeclared identifier
+     1>d:\sdl_test\sdl_test\stage.h(19): error C2059: syntax error : '>'
+     1>d:\sdl_test\sdl_test\stage.h(19): error C2976: 'std::vector' : too few template arguments
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\vector(650) : see declaration of 'std::vector'
+     1>d:\sdl_test\sdl_test\sprite.h(78): error C2535: 'Sprite_base::Sprite_base(void)' : member function already defined or declared
+                 d:\sdl_test\sdl_test\sprite.h(48) : see declaration of 'Sprite_base::Sprite_base'
+     1>d:\sdl_test\sdl_test\sprite_scroller.h(46): warning C4250: 'scroller::Sprite_player' : inherits 'Sprite_bounds::Sprite_bounds::checkCollide' via dominance
+                 d:\sdl_test\sdl_test\sprite.h(116) : see declaration of 'Sprite_bounds::checkCollide'
+         Sprite.cpp
+     1>d:\sdl_test\sdl_test\camera.h(18): error C2653: 'physics' : is not a class or namespace name
+     1>d:\sdl_test\sdl_test\camera.h(18): error C2146: syntax error : missing ';' before identifier 'vel'
+     1>d:\sdl_test\sdl_test\camera.h(18): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\sdl_test\sdl_test\stage.h(16): error C2065: 'Sprite_base' : undeclared identifier
+     1>d:\sdl_test\sdl_test\stage.h(16): error C2059: syntax error : '>'
+     1>d:\sdl_test\sdl_test\stage.h(16): error C2976: 'std::vector' : too few template arguments
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\vector(650) : see declaration of 'std::vector'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\vector(650) : see declaration of 'std::vector'
+     1>d:\sdl_test\sdl_test\stage.h(19): error C2065: 'Sprite_base' : undeclared identifier
+     1>d:\sdl_test\sdl_test\stage.h(19): error C2059: syntax error : '>'
+     1>d:\sdl_test\sdl_test\stage.h(19): error C2976: 'std::vector' : too few template arguments
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\vector(650) : see declaration of 'std::vector'
+     1>d:\sdl_test\sdl_test\sprite.h(78): error C2535: 'Sprite_base::Sprite_base(void)' : member function already defined or declared
+                 d:\sdl_test\sdl_test\sprite.h(48) : see declaration of 'Sprite_base::Sprite_base'
+     1>d:\sdl_test\sdl_test\sprite.cpp(39): error C2511: 'void Sprite_base::draw(float)' : overloaded member function not found in 'Sprite_base'
+                 d:\sdl_test\sdl_test\sprite.h(27) : see declaration of 'Sprite_base'
+     1>d:\sdl_test\sdl_test\sprite.cpp(40): error C2671: 'Sprite_base::draw' : static member functions do not have 'this' pointers
+     1>d:\sdl_test\sdl_test\sprite.cpp(51): error C2572: 'Sprite_text::Sprite_text' : redefinition of default parameter : parameter 9
+                 d:\sdl_test\sdl_test\sprite.h(168) : see declaration of 'Sprite_text::Sprite_text'
+     1>d:\sdl_test\sdl_test\sprite.cpp(51): error C2572: 'Sprite_text::Sprite_text' : redefinition of default parameter : parameter 8
+                 d:\sdl_test\sdl_test\sprite.h(168) : see declaration of 'Sprite_text::Sprite_text'
+         Canvas.cpp
+     1>d:\sdl_test\sdl_test\camera.h(18): error C2653: 'physics' : is not a class or namespace name
+     1>d:\sdl_test\sdl_test\camera.h(18): error C2146: syntax error : missing ';' before identifier 'vel'
+     1>d:\sdl_test\sdl_test\camera.h(18): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\sdl_test\sdl_test\stage.h(16): error C2065: 'Sprite_base' : undeclared identifier
+     1>d:\sdl_test\sdl_test\stage.h(16): error C2059: syntax error : '>'
+     1>d:\sdl_test\sdl_test\stage.h(16): error C2976: 'std::vector' : too few template arguments
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\vector(650) : see declaration of 'std::vector'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\vector(650) : see declaration of 'std::vector'
+     1>d:\sdl_test\sdl_test\stage.h(19): error C2065: 'Sprite_base' : undeclared identifier
+     1>d:\sdl_test\sdl_test\stage.h(19): error C2059: syntax error : '>'
+     1>d:\sdl_test\sdl_test\stage.h(19): error C2976: 'std::vector' : too few template arguments
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\vector(650) : see declaration of 'std::vector'
+     1>d:\sdl_test\sdl_test\sprite.h(78): error C2535: 'Sprite_base::Sprite_base(void)' : member function already defined or declared
+                 d:\sdl_test\sdl_test\sprite.h(48) : see declaration of 'Sprite_base::Sprite_base'
+     1>d:\sdl_test\sdl_test\canvas.cpp(15): error C2374: 'UPS' : redefinition; multiple initialization
+                 d:\sdl_test\sdl_test\canvas.h(25) : see declaration of 'UPS'
+     1>d:\sdl_test\sdl_test\canvas.cpp(16): error C2374: 'INTERVAL' : redefinition; multiple initialization
+                 d:\sdl_test\sdl_test\canvas.h(26) : see declaration of 'INTERVAL'
+     1>d:\sdl_test\sdl_test\canvas.cpp(17): error C2374: 'MAX_FRAMESKIP' : redefinition; multiple initialization
+                 d:\sdl_test\sdl_test\canvas.h(27) : see declaration of 'MAX_FRAMESKIP'
+         Camera.cpp
+     1>d:\sdl_test\sdl_test\stage.h(16): error C2065: 'Sprite_base' : undeclared identifier
+     1>d:\sdl_test\sdl_test\stage.h(16): error C2059: syntax error : '>'
+     1>d:\sdl_test\sdl_test\stage.h(16): error C2976: 'std::vector' : too few template arguments
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\vector(650) : see declaration of 'std::vector'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\vector(650) : see declaration of 'std::vector'
+     1>d:\sdl_test\sdl_test\stage.h(19): error C2065: 'Sprite_base' : undeclared identifier
+     1>d:\sdl_test\sdl_test\stage.h(19): error C2059: syntax error : '>'
+     1>d:\sdl_test\sdl_test\stage.h(19): error C2976: 'std::vector' : too few template arguments
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\vector(650) : see declaration of 'std::vector'
+     1>d:\sdl_test\sdl_test\sprite.h(78): error C2535: 'Sprite_base::Sprite_base(void)' : member function already defined or declared
+                 d:\sdl_test\sdl_test\sprite.h(48) : see declaration of 'Sprite_base::Sprite_base'
+         Generating Code...
+     1>Done Building Project "D:\SDL_test\SDL_test\SDL_test.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:16.25

@@ -1,0 +1,20 @@
+TODO
+pk-add z to Sprite constructors
+pk-define draw() in Sprite_base
+pk-finish Sprite_text
+	-initalize Sprite_text's clips and whatnot
+	*empty default constructor added to Sprite_base
+-draw-update loop!
+-finish implementing collision detection in Sprite classes
+-add stage component loading function(s) to Stage
+-add stage loading functions to Canvas
+
+
+
+SDL_Surface* crop_surface(SDL_Surface* sprite_sheet, int x, int y, int width, int height)
+{
+    SDL_Surface* surface = SDL_CreateRGBSurface(sprite_sheet->flags, width, height, sprite_sheet->format->BitsPerPixel, sprite_sheet->format->Rmask, sprite_sheet->format->Gmask, sprite_sheet->format->Bmask, sprite_sheet->format->Amask);
+    SDL_Rect rect = {x, y, width, height};
+    SDL_BlitSurface(sprite_sheet, &rect, surface, 0);
+    return surface;
+}

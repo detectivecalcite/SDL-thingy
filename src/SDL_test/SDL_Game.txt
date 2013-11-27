@@ -1,0 +1,5 @@
+SDL_Game
+
+-Multiple-inherit from Sprite component classes to make Sprite_player, Sprite_enemy, etc.
+-Make instances of Stage (or subclasses) and feed it a vector of asset pointers
+-Call Stage::loop() to run each stage!
