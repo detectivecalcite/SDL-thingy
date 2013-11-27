@@ -58,6 +58,9 @@ public:
 	virtual void draw(double interpolation);
 
 	std::vector<SDL_Rect>::const_iterator currentClip;
+
+	std::map<std::vector<SDL_Rect>::const_iterator, SDL_Rect>::const_iterator currentBorderRect;
+
 	SDL_Rect dest;
 
 protected:
@@ -71,7 +74,6 @@ protected:
 
 	//borderRect and iterator
 	std::map<std::vector<SDL_Rect>::const_iterator, SDL_Rect> borderRects;
-	std::map<std::vector<SDL_Rect>::const_iterator, SDL_Rect>::const_iterator currentBorderRect;
 
 	//depth variable; bigger goes on top
 	ushort z;
