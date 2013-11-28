@@ -112,7 +112,7 @@ void Canvas::present()
 
 SDL_Rect Canvas::get_borderRect(const SDL_Surface* surface)
 {
-	//pointer to first pixel in surface
+	//pixel ptr
 	const Uint32* pixel = (Uint32*)surface->pixels;
 
 	//border rect

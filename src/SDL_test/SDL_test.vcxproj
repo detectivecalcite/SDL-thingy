@@ -77,30 +77,29 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Camera.cpp" />
-    <ClCompile Include="Canvas.cpp" />
+    <ClCompile Include="render\Camera.cpp" />
+    <ClCompile Include="render\Canvas.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Sprite.cpp" />
-    <ClCompile Include="Sprite_scroller.cpp" />
-    <ClCompile Include="Stage.cpp" />
+    <ClCompile Include="render\Sprite.cpp" />
+    <ClCompile Include="testGame\Sprite_scroller.cpp" />
+    <ClCompile Include="render\Stage.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Camera.h" />
-    <ClInclude Include="Canvas.h" />
-    <ClInclude Include="Sprite.h" />
-    <ClInclude Include="Sprite_scroller.h" />
-    <ClInclude Include="Stage.h" />
-    <ClInclude Include="Top.h" />
+    <ClInclude Include="render\Camera.h" />
+    <ClInclude Include="render\Canvas.h" />
+    <ClInclude Include="render\Sprite.h" />
+    <ClInclude Include="testGame\Sprite_scroller.h" />
+    <ClInclude Include="render\Stage.h" />
+    <ClInclude Include="render\Top.h" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="SDL_Game.txt" />
-    <Text Include="todo.txt" />
+    <Text Include="render\review\todo.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="icon.ico" />
+    <Image Include="testGame\icon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="sprite.cd" />
+    <None Include="render\review\sprite.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
