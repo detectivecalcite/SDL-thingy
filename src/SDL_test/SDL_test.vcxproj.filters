@@ -28,6 +28,9 @@
     <Filter Include="Source Files\implem\render">
       <UniqueIdentifier>{dbbd7385-4220-4e31-9f36-f294ecd7bdce}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\implem\render\Sprite">
+      <UniqueIdentifier>{f9a7d4fc-b070-4fa1-97bf-e5057c9ed743}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -39,14 +42,26 @@
     <ClCompile Include="render\Canvas.cpp">
       <Filter>Source Files\implem\render</Filter>
     </ClCompile>
-    <ClCompile Include="render\Sprite.cpp">
-      <Filter>Source Files\implem\render</Filter>
-    </ClCompile>
-    <ClCompile Include="testGame\Sprite_scroller.cpp">
-      <Filter>Source Files\implem\render</Filter>
-    </ClCompile>
     <ClCompile Include="render\Stage.cpp">
       <Filter>Source Files\implem\render</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Sprite_base.cpp">
+      <Filter>Source Files\implem\render\Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Sprite_bounds.cpp">
+      <Filter>Source Files\implem\render\Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Sprite_move.cpp">
+      <Filter>Source Files\implem\render\Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Sprite_text.cpp">
+      <Filter>Source Files\implem\render\Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Sprite_final.cpp">
+      <Filter>Source Files\implem\render\Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Sprite_rot.cpp">
+      <Filter>Source Files\implem\render\Sprite</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -59,13 +74,13 @@
     <ClInclude Include="render\Sprite.h">
       <Filter>Header Files\render</Filter>
     </ClInclude>
-    <ClInclude Include="testGame\Sprite_scroller.h">
-      <Filter>Header Files\render</Filter>
-    </ClInclude>
     <ClInclude Include="render\Stage.h">
       <Filter>Header Files\render</Filter>
     </ClInclude>
     <ClInclude Include="render\Top.h">
+      <Filter>Header Files\render</Filter>
+    </ClInclude>
+    <ClInclude Include="GameEntity.h">
       <Filter>Header Files\render</Filter>
     </ClInclude>
   </ItemGroup>

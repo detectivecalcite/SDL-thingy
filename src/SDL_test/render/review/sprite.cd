@@ -1,20 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access">
+<ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Sprite_base">
     <Position X="4" Y="0.5" Width="2" />
     <Compartments>
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
-    <NestedTypes>
-      <Enum Name="Sprite_base::Collision" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>Sprite.h</NewMemberFileName>
-        </TypeIdentifier>
-      </Enum>
-    </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AAAAAgBAAEAIgwAAAAIAAAAAAAgACgAAAAAAAQAUEAA=</HashCode>
-      <FileName>Sprite.h</FileName>
+      <HashCode>AAAAAgBAAEAIgwAAAAYAAAAAAAgACgAAAAAAAQAUEAA=</HashCode>
+      <FileName>render\Sprite.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Sprite_bounds">
@@ -31,21 +24,21 @@
     </NestedTypes>
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAAgAAAAAAAAAAAAAAAAAAAAACAgAAAAA=</HashCode>
-      <FileName>Sprite.h</FileName>
+      <FileName>render\Sprite.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Canvas">
     <Position X="12.75" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QEIAAAAAIEAACAAAAAARAAA0AAIAAAIIAIABAEQAgAA=</HashCode>
-      <FileName>Canvas.h</FileName>
+      <FileName>render\Canvas.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Sprite_move">
     <Position X="2.25" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAQAAAAAAAAAAAACAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
-      <FileName>Sprite.h</FileName>
+      <FileName>render\Sprite.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="scroller::Sprite_player">
@@ -67,21 +60,21 @@
     </NestedTypes>
     <TypeIdentifier>
       <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
-      <FileName>Sprite_scroller.h</FileName>
+      <FileName>testGame\Sprite_scroller.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Sprite_scale">
     <Position X="4.25" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAACABAAEAAAAAAA=</HashCode>
-      <FileName>Sprite.h</FileName>
+      <FileName>render\Sprite.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Sprite_text">
     <Position X="6" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAAAAAAAAAAAAAAAAAIAAAAAAAAEAIAAAAAAAEAAA=</HashCode>
-      <FileName>Sprite.h</FileName>
+      <FileName>render\Sprite.h</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

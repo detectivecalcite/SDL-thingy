@@ -9,8 +9,11 @@
 
 class Camera
 {
+	friend class Stage;
 public:
-	Camera(uint pos_x, uint pos_y, bool dynamicBorderWidth);
+	Camera(uint pos_x, uint pos_y, uint w, uint h, bool dynamicBorderWidth);
+
+	void update();
 
 protected:
 	uint w, h;

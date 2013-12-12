@@ -30,10 +30,10 @@ public:
 	static SDL_Rect windowBox;
 
 	//loading and cropping textures/surfaces
-	//cropSurface() allocates a new texture
 	static SDL_Texture* loadImage_texture(const std::string& filename);
 	static SDL_Surface* loadImage_surface(const std::string& filename);
-	static SDL_Surface* cropSurface(SDL_Surface* source, uint x, uint y, uint w, uint h);
+	//allocates a new texture
+	static SDL_Surface* cropSurface(SDL_Surface* source, uint x, uint y, uint w, uint h, bool freeSource = false);
 
 	//function that returns borderRect from a surface
 	static SDL_Rect get_borderRect(const SDL_Surface* srf);
@@ -43,6 +43,7 @@ public:
 	//renderer access
 	static void clear();
 	static void copy(const Sprite_base& sprite);
+	static void copyEx(const Sprite_scale& sprite);
 	static void present();
 
 	static void logError(const std::string& error_string);

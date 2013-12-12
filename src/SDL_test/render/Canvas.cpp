@@ -6,22 +6,27 @@ using namespace std;
 
 
 //definitions
-std::unique_ptr<SDL_Window, void (*)(SDL_Window*)> Canvas::window = std::unique_ptr<SDL_Window, void (*)(SDL_Window*)>(nullptr, SDL_DestroyWindow);
-std::unique_ptr<SDL_Renderer, void (*)(SDL_Renderer*)> Canvas::renderer = std::unique_ptr<SDL_Renderer, void (*)(SDL_Renderer*)>(nullptr, SDL_DestroyRenderer);
+unique_ptr<SDL_Window, void (*)(SDL_Window*)> Canvas::window = std::unique_ptr<SDL_Window, void (*)(SDL_Window*)>(nullptr, SDL_DestroyWindow);
+unique_ptr<SDL_Renderer, void (*)(SDL_Renderer*)> Canvas::renderer = std::unique_ptr<SDL_Renderer, void (*)(SDL_Renderer*)>(nullptr, SDL_DestroyRenderer);
 SDL_Rect Canvas::windowBox;
 ofstream Canvas::errorFile;
 
-uint Canvas::FPS;
+uint Canvas::FPS = 0;
 const uint Canvas::UPS = 30;
 const uint Canvas::INTERVAL = 1000 / UPS;
 const uint Canvas::MAX_FRAMESKIP = 5;
 
 void Canvas::init(const std::string& window_name, uint w, uint h)
 {
+	//open this first so exception error msgs can get recorded right away
+	errorFile.open("error.log", fstream::out);
+	
 	if (SDL_Init(SDL_INIT_EVERYTHING) == -1)
 		throw runtime_error("SDL init failed");
 	if (TTF_Init() == -1)
 		throw runtime_error("TTF init failed");
+	if (IMG_Init(IMG_INIT_PNG) == -1)
+		throw runtime_error("PNG init failed");
 
 	windowBox.x = SDL_WINDOWPOS_CENTERED;
 	windowBox.y = SDL_WINDOWPOS_CENTERED;
@@ -37,8 +42,6 @@ void Canvas::init(const std::string& window_name, uint w, uint h)
 	{
 		throw runtime_error("Renderer init failed");
 	}
-
-	errorFile.open("error.log", fstream::out);
 }
 
 SDL_Texture* Canvas::loadImage_texture(const std::string& filename)
@@ -61,15 +64,15 @@ SDL_Surface* Canvas::loadImage_surface(const std::string& filename)
 	return surface;
 }
 
-SDL_Surface* Canvas::cropSurface(SDL_Surface* source, uint x, uint y, uint w, uint h)
+SDL_Surface* Canvas::cropSurface(SDL_Surface* source, uint x, uint y, uint w, uint h, bool freeSource)
 {
 	//make and blit onto new texture
 	SDL_Surface* dest = SDL_CreateRGBSurface(source->flags, w, h, source->format->BitsPerPixel, source->format->Rmask, source->format->Gmask, source->format->Bmask, source->format->Amask);
 	SDL_Rect rect = {x, y, w, h};
 	SDL_BlitSurface(source, &rect, dest, NULL);
 
-	//free source surface
-	SDL_FreeSurface(source);
+	if (freeSource)
+		SDL_FreeSurface(source);
 
 	return dest;
 }
@@ -94,10 +97,17 @@ void Canvas::quit()
 void Canvas::copy(const Sprite_base& sprite)
 {
 	SDL_Rect src = *sprite.currentClip;
-	
 	SDL_Rect dst = sprite.dest;
 
 	SDL_RenderCopy(renderer.get(), sprite.texture.get(), &src, &dst);
+}
+
+void Canvas::copyEx(const Sprite_scale& sprite)
+{
+	SDL_Rect src = *sprite.currentClip;
+	SDL_Rect dst = sprite.dest;
+
+	SDL_RenderCopyEx(renderer.get(), sprite.texture.get(), &src, &dst, sprite.rotAngle, &sprite.rotPoint, sprite.flip);
 }
 
 void Canvas::clear()

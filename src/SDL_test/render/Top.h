@@ -18,7 +18,7 @@
 #endif
 
 #define OPTIONAL_ARG	0
-#define UNDEF_IMAGE		"
+#define UNDEF_IMAGE		""
 
 #include "SDL.h"
 #include "SDL_image.h"
@@ -28,8 +28,8 @@
 #include "Stage.h"
 #include "Camera.h"
 
-#include <stdlib.h>
-#include <time.h>
+#include <cstdlib>
+#include <ctime>
 
 #include <vector>
 #include <map>

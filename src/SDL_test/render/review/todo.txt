@@ -1,10 +1,11 @@
 TODO
-dc -add z to Sprite constructors
-dc -define draw() in Sprite_base
-dc -finish Sprite_text
-	-initalize Sprite_text's clips and whatnot
-	*empty default constructor added to Sprite_base
--draw-update loop!
--finish implementing collision detection in Sprite classes
--add stage component loading function(s) to Stage
--add stage loading functions to Canvas
+-get rid of Top.h and do individual includes
+
+-translate rects for classes that support rotation
+
+-final checkCollide function will need to be multiple rects **and** rotation
+	-implement axis-based point collision
+
+-update functions have to keep collision rects updated along the clip sheet
+
+-make Stage hold GameEntity objects

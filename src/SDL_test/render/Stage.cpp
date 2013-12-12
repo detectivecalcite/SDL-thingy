@@ -5,50 +5,34 @@
 using namespace std;
 
 
-Stage::Stage(const vector<Sprite_base*>& sprites) : sprites(sprites)
+Stage::Stage(const vector<Sprite_base*>& sprites)
 {
-	//something prolly oughta happen here
+	//sort and assign Sprite_base*'s
+	for (vector<Sprite_base*>::const_iterator itElem = sprites.cbegin(); itElem != sprites.cend(); ++itElem)
+	{
+		this->sprites.push_back(unique_ptr<Sprite_base>(*itElem));
+	}
 }
 
-void Stage::update()
+void Stage::updateAssets()
 {
-	static ticks;
-	for (auto iSprite : sprites)
-	{
-		iSprite->update(SDL_GetTicks() - ticks);
-	}
+	//deltaTicks should be pretty much 0 on first execution
+	static uint loopTicks = SDL_GetTicks();
 
-	ticks = SDL_GetTicks();
+	for (std::vector<unique_ptr<Sprite_base>>::const_iterator itElem = sprites.cbegin(); itElem != sprites.cend(); ++itElem)
+		itElem->get()->update(SDL_GetTicks() - loopTicks);
+
+	//record ticks after update() execution so that deltaTicks can get calculated next run-through
+	loopTicks = SDL_GetTicks();
 }
 
-void Stage::draw(float interpolation)
+void Stage::draw(double interpolation)
 {
-	for (auto iSprite : sprites)
-	{
-		iSprite->draw(interpolation);
-	}
+	for (std::vector<unique_ptr<Sprite_base>>::const_iterator itElem = sprites.cbegin(); itElem != sprites.cend(); ++itElem)
+		itElem->get()->draw(interpolation);
 }
 
 void Stage::loop()
 {
-	uint nextTick = SDL_GetTicks();
-	uint loops;
-	float interpolation;
-
-	bool game = true;
-	while (game)
-	{
-		loops = 0;
-
-		while (SDL_GetTicks() > nextTick && loops < Canvas::MAX_FRAMESKIP)
-		{
-			update();
-
-			nextTick += Canvas::INTERVAL;
-			loops++;
-		}
-
-		interpolation = float(SDL_GetTicks() + Canvas::INTERVAL - nextTick) / float(Canvas::INTERVAL);
-		draw(interpolation);
-	}
+	//
 }
