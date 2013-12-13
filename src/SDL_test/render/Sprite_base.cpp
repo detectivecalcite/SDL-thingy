@@ -2,55 +2,50 @@
 using namespace std;
 
 
-//texture unique_ptr assigned to nullptr with SDL_DestroyTexture() deleter
-//asigned in constructor body
 Sprite_base::Sprite_base(const string& filename,
 						 const vector<SDL_Rect>& clips,
 						 int pos_x,
 						 int pos_y,
+						 const map<uint, SDL_Rect>& bounds,
 						 bool solid,
 						 ushort z) : filename(filename),
 									 clips(clips),
-									 currentClip(this->clips.cbegin()),
+									 clipCurrent(this->clips.cbegin()),
 									 numClips(this->clips.size()),
-									 texture(unique_ptr<SDL_Texture, void(*)(SDL_Texture*)>(nullptr, SDL_DestroyTexture)),
-									 surface(unique_ptr<SDL_Surface, void(*)(SDL_Surface*)>(nullptr, SDL_FreeSurface)),
+									 texture(unique_ptr<SDL_Texture, void(*)(SDL_Texture*)>(nullptr, SDL_DestroyTexture)),	//texture & surface initialized to nullptr, 
+									 surface(unique_ptr<SDL_Surface, void(*)(SDL_Surface*)>(nullptr, SDL_FreeSurface)),		//then actually assigned in body
 									 solid(solid),
 									 z(z)
 {
 	dest.x = pos_x;
 	dest.y = pos_y;
-	dest.w = currentClip->w;
-	dest.h = currentClip->h;
+	dest.w = clipCurrent->w;
+	dest.h = clipCurrent->h;
 
 	texture.reset(Canvas::loadImage_texture(filename));
+	if (texture.get() == nullptr)
+		throw runtime_error("Texture load error");
 	surface.reset(Canvas::loadImage_surface(filename));
+	if (surface.get() == nullptr)
+		throw runtime_error("Surface load error");
 
-	//initalize borderRects
-	//iterate through clip rectangles
-	for (auto itElem = clips.cbegin(); itElem != clips.cend(); ++itElem)
+	//init bounds
+	//if the user just wants the border rect
+	if (bounds == std::map<uint, SDL_Rect>())
 	{
-		//get surface under clip rect
-		//temp surface created
-		SDL_Surface* brSurface = Canvas::cropSurface(surface.get(), itElem->x, itElem->y, itElem->w, itElem->h);
+		for (auto it : clips)
+		{
+			SDL_Surface* cropped = Canvas::cropSurface(surface.get(), it.x, it.y, it.w, it.h);
 
-		//get borderRect and add it to the Sprite's
-		SDL_Rect br = Canvas::get_borderRect(brSurface);
-		borderRects.insert(pair<vector<SDL_Rect>::const_iterator, SDL_Rect>(itElem, br));
-
-		//free temporary surface
-		SDL_FreeSurface(brSurface);
-
-		//assign burrentBorderRect the first iteration through
-		if (itElem == clips.cbegin())
-			currentBorderRect = borderRects.cbegin();
+		}
+	}
+	//if the user did provide a bounds map
+	else
+	{
+		this->bounds = bounds;
 	}
 
-	//init translatedBorderRect here
-	translatedBorderRect.x = currentBorderRect->second.x + dest.x;
-	translatedBorderRect.y = currentBorderRect->second.y + dest.y;
-	translatedBorderRect.w = currentBorderRect->second.w;
-	translatedBorderRect.h = currentBorderRect->second.h;
+	//translate initial bounds
 	
 }
 
@@ -83,15 +78,9 @@ Sprite_base::Sprite_base(const string& filename,
 	texture.reset(Canvas::loadImage_texture(filename));
 	surface.reset(Canvas::loadImage_surface(filename));
 
-	//only one border rect / clip rect
-	borderRects.insert(pair<vector<SDL_Rect>::const_iterator, SDL_Rect>(clips.cbegin(), Canvas::get_borderRect(surface.get())));
-	currentBorderRect = borderRects.cbegin();
+	//init bounds
 
-	//init translatedBorderRect
-	translatedBorderRect.x = currentBorderRect->second.x + dest.x;
-	translatedBorderRect.y = currentBorderRect->second.y + dest.y;
-	translatedBorderRect.w = currentBorderRect->second.w;
-	translatedBorderRect.h = currentBorderRect->second.h;
+	//translate bounds here
 }
 
 //interpolation not used in basic draw function
@@ -109,16 +98,16 @@ bool Sprite_base::checkCollide(const vector<SDL_Rect>& collisionRects)
 	for (auto itElem = collisionRects.cbegin(); itElem != collisionRects.cend(); itElem++)
 	{
 		//if tl point fits into rect
-		if ((itElem->x >= translatedBorderRect.x) && (itElem->x <= translatedBorderRect.x + translatedBorderRect.w) && (itElem->y >= translatedBorderRect.y) && (itElem->y >= translatedBorderRect.y) && (itElem->y <= translatedBorderRect.y + translatedBorderRect.h))
+		if ((itElem->x >= currentBorderRect_translated.x) && (itElem->x <= currentBorderRect_translated.x + currentBorderRect_translated.w) && (itElem->y >= currentBorderRect_translated.y) && (itElem->y >= currentBorderRect_translated.y) && (itElem->y <= currentBorderRect_translated.y + currentBorderRect_translated.h))
 			return true;
 		//if tr point fits into rect
-		if ((itElem->x + itElem->w >= translatedBorderRect.x) && (itElem->x + itElem->w <= translatedBorderRect.x + translatedBorderRect.w) && (itElem->y >= translatedBorderRect.y) && (itElem->y < translatedBorderRect.y + translatedBorderRect.h))
+		if ((itElem->x + itElem->w >= currentBorderRect_translated.x) && (itElem->x + itElem->w <= currentBorderRect_translated.x + currentBorderRect_translated.w) && (itElem->y >= currentBorderRect_translated.y) && (itElem->y < currentBorderRect_translated.y + currentBorderRect_translated.h))
 			return true;
 		//if bl point fits into rect
-		if ((itElem->x >= translatedBorderRect.x) && (itElem->x <= translatedBorderRect.x + translatedBorderRect.w) && (itElem->y + itElem->h >= translatedBorderRect.y) && (itElem->y + itElem->h <= translatedBorderRect.y + translatedBorderRect.h))
+		if ((itElem->x >= currentBorderRect_translated.x) && (itElem->x <= currentBorderRect_translated.x + currentBorderRect_translated.w) && (itElem->y + itElem->h >= currentBorderRect_translated.y) && (itElem->y + itElem->h <= currentBorderRect_translated.y + currentBorderRect_translated.h))
 			return true;
 		//if br point fits into rect
-		if ((itElem->x + itElem->w >= translatedBorderRect.x) && (itElem->x + itElem->w <= translatedBorderRect.x + translatedBorderRect.w) && (itElem->y + itElem->h >= translatedBorderRect.y) && (itElem->y + itElem->h <= translatedBorderRect.y + translatedBorderRect.h))
+		if ((itElem->x + itElem->w >= currentBorderRect_translated.x) && (itElem->x + itElem->w <= currentBorderRect_translated.x + currentBorderRect_translated.w) && (itElem->y + itElem->h >= currentBorderRect_translated.y) && (itElem->y + itElem->h <= currentBorderRect_translated.y + currentBorderRect_translated.h))
 			return true;
 		else
 			return false;

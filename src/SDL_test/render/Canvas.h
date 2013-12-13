@@ -43,7 +43,7 @@ public:
 	//renderer access
 	static void clear();
 	static void copy(const Sprite_base& sprite);
-	static void copyEx(const Sprite_scale& sprite);
+	static void copyEx(const Sprite_rot& sprite);
 	static void present();
 
 	static void logError(const std::string& error_string);

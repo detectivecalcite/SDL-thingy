@@ -20,9 +20,11 @@
 #define OPTIONAL_ARG	0
 #define UNDEF_IMAGE		""
 
+
 #include "SDL.h"
 #include "SDL_image.h"
 #include "SDL_ttf.h"
+
 #include "Canvas.h"
 #include "Sprite.h"
 #include "Stage.h"

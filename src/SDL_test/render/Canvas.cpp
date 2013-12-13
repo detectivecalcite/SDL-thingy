@@ -102,7 +102,7 @@ void Canvas::copy(const Sprite_base& sprite)
 	SDL_RenderCopy(renderer.get(), sprite.texture.get(), &src, &dst);
 }
 
-void Canvas::copyEx(const Sprite_scale& sprite)
+void Canvas::copyEx(const Sprite_rot& sprite)
 {
 	SDL_Rect src = *sprite.currentClip;
 	SDL_Rect dst = sprite.dest;

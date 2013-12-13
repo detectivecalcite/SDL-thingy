@@ -1,158 +1,20 @@
-﻿Build started 12/11/2013 8:28:45 AM.
+﻿Build started 12/12/2013 1:41:10 PM.
      1>Project "C:\Users\psiic_000\Documents\GitHub\SDL-thingy\src\SDL_test\SDL_test.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt render\Camera.cpp render\Canvas.cpp main.cpp render\Sprite_final.cpp render\Sprite_text.cpp render\Sprite_base.cpp render\Sprite_bounds.cpp render\Sprite_move.cpp render\Sprite_rot.cpp render\Stage.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp render\Camera.cpp render\Canvas.cpp render\Sprite_base.cpp render\Sprite_bounds.cpp render\Sprite_final.cpp render\Sprite_rot.cpp render\Sprite_text.cpp render\Stage.cpp
          Stage.cpp
      1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\camera.h(21): error C2653: 'physics' : is not a class or namespace name
      1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\camera.h(21): error C2146: syntax error : missing ';' before identifier 'vel'
      1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\camera.h(21): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(145): warning C4244: '+=' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(146): warning C4244: '+=' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(167): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(167): warning C4183: 'Sprite_scale': missing return type; assumed to be a member function returning 'int'
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(156): warning C4244: '+=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(157): warning C4244: '+=' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(178): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
      1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(178): warning C4183: 'Sprite_scale': missing return type; assumed to be a member function returning 'int'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(225): error C2143: syntax error : missing ')' before ';'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(234): warning C4250: 'Sprite_final' : inherits 'Sprite_move::Sprite_move::update' via dominance
-                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(140) : see declaration of 'Sprite_move::update'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\canvas.h(46): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\canvas.h(46): error C2143: syntax error : missing ',' before '&'
-         Sprite_rot.cpp
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\camera.h(21): error C2653: 'physics' : is not a class or namespace name
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\camera.h(21): error C2146: syntax error : missing ';' before identifier 'vel'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\camera.h(21): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\stage.h(16): error C2065: 'Sprite_base' : undeclared identifier
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\stage.h(16): error C2059: syntax error : '>'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\stage.h(16): error C2976: 'std::vector' : too few template arguments
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\vector(650) : see declaration of 'std::vector'
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\vector(650) : see declaration of 'std::vector'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\stage.h(19): error C2065: 'Sprite_base' : undeclared identifier
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\stage.h(19): error C2923: 'std::unique_ptr' : 'Sprite_base' is not a valid template type argument for parameter '_Ty'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\stage.h(19): error C3203: 'unique_ptr' : unspecialized class template can't be used as a template argument for template parameter '_Ty', expected a real type
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\canvas.h(46): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\canvas.h(46): error C2143: syntax error : missing ',' before '&'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(145): warning C4244: '+=' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(146): warning C4244: '+=' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(167): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(167): warning C4183: 'Sprite_scale': missing return type; assumed to be a member function returning 'int'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(178): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(178): warning C4183: 'Sprite_scale': missing return type; assumed to be a member function returning 'int'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(225): error C2143: syntax error : missing ')' before ';'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(234): warning C4250: 'Sprite_final' : inherits 'Sprite_move::Sprite_move::update' via dominance
-                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(140) : see declaration of 'Sprite_move::update'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite_rot.cpp(5): error C2226: syntax error : unexpected type 'std::string'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite_rot.cpp(13): error C2143: syntax error : missing ')' before ','
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite_rot.cpp(13): error C2259: 'Sprite_base' : cannot instantiate abstract class
-                 due to following members:
-                 'void Sprite_base::update(unsigned int)' : is abstract
-                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(62) : see declaration of 'Sprite_base::update'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite_rot.cpp(13): error C2248: 'Sprite_base::Sprite_base' : cannot access protected member declared in class 'Sprite_base'
-                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(73) : see declaration of 'Sprite_base::Sprite_base'
-                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(27) : see declaration of 'Sprite_base'
-                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(73) : see declaration of 'Sprite_base::Sprite_base'
-                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(27) : see declaration of 'Sprite_base'
-                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(73) : see declaration of 'Sprite_base::Sprite_base'
-                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(27) : see declaration of 'Sprite_base'
-                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(73) : see declaration of 'Sprite_base::Sprite_base'
-                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(27) : see declaration of 'Sprite_base'
-                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(73) : see declaration of 'Sprite_base::Sprite_base'
-                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(27) : see declaration of 'Sprite_base'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite_rot.cpp(13): error C2059: syntax error : ')'
-                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(73) : see declaration of 'Sprite_base::Sprite_base'
-                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(27) : see declaration of 'Sprite_base'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite_rot.cpp(14): error C2065: 'rotPoint' : undeclared identifier
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite_rot.cpp(14): error C2259: 'Sprite_base' : cannot instantiate abstract class
-                 due to following members:
-                 'void Sprite_base::update(unsigned int)' : is abstract
-                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(62) : see declaration of 'Sprite_base::update'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite_rot.cpp(15): error C2065: 'rotAngle' : undeclared identifier
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite_rot.cpp(15): error C2259: 'Sprite_base' : cannot instantiate abstract class
-                 due to following members:
-                 'void Sprite_base::update(unsigned int)' : is abstract
-                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(62) : see declaration of 'Sprite_base::update'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite_rot.cpp(16): error C2065: 'flip' : undeclared identifier
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite_rot.cpp(17): error C2448: 'flip' : function-style initializer appears to be a function definition
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite_rot.cpp(22): error C2226: syntax error : unexpected type 'std::string'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite_rot.cpp(31): error C2143: syntax error : missing ')' before ','
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite_rot.cpp(31): error C2259: 'Sprite_base' : cannot instantiate abstract class
-                 due to following members:
-                 'void Sprite_base::update(unsigned int)' : is abstract
-                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(62) : see declaration of 'Sprite_base::update'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite_rot.cpp(31): error C2248: 'Sprite_base::Sprite_base' : cannot access protected member declared in class 'Sprite_base'
-                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(73) : see declaration of 'Sprite_base::Sprite_base'
-                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(27) : see declaration of 'Sprite_base'
-                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(73) : see declaration of 'Sprite_base::Sprite_base'
-                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(27) : see declaration of 'Sprite_base'
-                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(73) : see declaration of 'Sprite_base::Sprite_base'
-                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(27) : see declaration of 'Sprite_base'
-                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(73) : see declaration of 'Sprite_base::Sprite_base'
-                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(27) : see declaration of 'Sprite_base'
-                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(73) : see declaration of 'Sprite_base::Sprite_base'
-                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(27) : see declaration of 'Sprite_base'
-                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(73) : see declaration of 'Sprite_base::Sprite_base'
-                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(27) : see declaration of 'Sprite_base'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite_rot.cpp(31): error C2059: syntax error : ')'
-                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(73) : see declaration of 'Sprite_base::Sprite_base'
-                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(27) : see declaration of 'Sprite_base'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite_rot.cpp(32): error C2259: 'Sprite_base' : cannot instantiate abstract class
-                 due to following members:
-                 'void Sprite_base::update(unsigned int)' : is abstract
-                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(62) : see declaration of 'Sprite_base::update'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite_rot.cpp(33): error C2259: 'Sprite_base' : cannot instantiate abstract class
-                 due to following members:
-                 'void Sprite_base::update(unsigned int)' : is abstract
-                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(62) : see declaration of 'Sprite_base::update'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite_rot.cpp(34): error C2065: 'flip' : undeclared identifier
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite_rot.cpp(35): error C2448: 'flip' : function-style initializer appears to be a function definition
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite_rot.cpp(41): error C2664: 'void Canvas::copyEx(const int)' : cannot convert argument 1 from 'Sprite_rot' to 'const int'
-                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-         Sprite_move.cpp
-         Sprite_bounds.cpp
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\camera.h(21): error C2653: 'physics' : is not a class or namespace name
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\camera.h(21): error C2146: syntax error : missing ';' before identifier 'vel'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\camera.h(21): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\stage.h(16): error C2065: 'Sprite_base' : undeclared identifier
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\stage.h(16): error C2059: syntax error : '>'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\stage.h(16): error C2976: 'std::vector' : too few template arguments
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\vector(650) : see declaration of 'std::vector'
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\vector(650) : see declaration of 'std::vector'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\stage.h(19): error C2065: 'Sprite_base' : undeclared identifier
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\stage.h(19): error C2923: 'std::unique_ptr' : 'Sprite_base' is not a valid template type argument for parameter '_Ty'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\stage.h(19): error C3203: 'unique_ptr' : unspecialized class template can't be used as a template argument for template parameter '_Ty', expected a real type
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\canvas.h(46): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\canvas.h(46): error C2143: syntax error : missing ',' before '&'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(145): warning C4244: '+=' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(146): warning C4244: '+=' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(167): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(167): warning C4183: 'Sprite_scale': missing return type; assumed to be a member function returning 'int'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(178): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(178): warning C4183: 'Sprite_scale': missing return type; assumed to be a member function returning 'int'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(225): error C2143: syntax error : missing ')' before ';'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(234): warning C4250: 'Sprite_final' : inherits 'Sprite_move::Sprite_move::update' via dominance
-                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(140) : see declaration of 'Sprite_move::update'
-         Sprite_base.cpp
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\camera.h(21): error C2653: 'physics' : is not a class or namespace name
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\camera.h(21): error C2146: syntax error : missing ';' before identifier 'vel'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\camera.h(21): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\stage.h(16): error C2065: 'Sprite_base' : undeclared identifier
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\stage.h(16): error C2059: syntax error : '>'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\stage.h(16): error C2976: 'std::vector' : too few template arguments
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\vector(650) : see declaration of 'std::vector'
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\vector(650) : see declaration of 'std::vector'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\stage.h(19): error C2065: 'Sprite_base' : undeclared identifier
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\stage.h(19): error C2923: 'std::unique_ptr' : 'Sprite_base' is not a valid template type argument for parameter '_Ty'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\stage.h(19): error C3203: 'unique_ptr' : unspecialized class template can't be used as a template argument for template parameter '_Ty', expected a real type
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\canvas.h(46): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\canvas.h(46): error C2143: syntax error : missing ',' before '&'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(145): warning C4244: '+=' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(146): warning C4244: '+=' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(167): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(167): warning C4183: 'Sprite_scale': missing return type; assumed to be a member function returning 'int'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(178): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(178): warning C4183: 'Sprite_scale': missing return type; assumed to be a member function returning 'int'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(225): error C2143: syntax error : missing ')' before ';'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(234): warning C4250: 'Sprite_final' : inherits 'Sprite_move::Sprite_move::update' via dominance
-                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(140) : see declaration of 'Sprite_move::update'
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(189): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(189): warning C4183: 'Sprite_scale': missing return type; assumed to be a member function returning 'int'
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(239): error C2143: syntax error : missing ')' before ';'
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(248): warning C4250: 'Sprite_final' : inherits 'Sprite_move::Sprite_move::update' via dominance
+                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(151) : see declaration of 'Sprite_move::update'
          Sprite_text.cpp
      1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\camera.h(21): error C2653: 'physics' : is not a class or namespace name
      1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\camera.h(21): error C2146: syntax error : missing ';' before identifier 'vel'
@@ -167,20 +29,55 @@
      1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\stage.h(19): error C3203: 'unique_ptr' : unspecialized class template can't be used as a template argument for template parameter '_Ty', expected a real type
      1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\canvas.h(46): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
      1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\canvas.h(46): error C2143: syntax error : missing ',' before '&'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(145): warning C4244: '+=' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(146): warning C4244: '+=' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(167): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(167): warning C4183: 'Sprite_scale': missing return type; assumed to be a member function returning 'int'
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(156): warning C4244: '+=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(157): warning C4244: '+=' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(178): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
      1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(178): warning C4183: 'Sprite_scale': missing return type; assumed to be a member function returning 'int'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(225): error C2143: syntax error : missing ')' before ';'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(234): warning C4250: 'Sprite_final' : inherits 'Sprite_move::Sprite_move::update' via dominance
-                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(140) : see declaration of 'Sprite_move::update'
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(189): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(189): warning C4183: 'Sprite_scale': missing return type; assumed to be a member function returning 'int'
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(239): error C2143: syntax error : missing ')' before ';'
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(248): warning C4250: 'Sprite_final' : inherits 'Sprite_move::Sprite_move::update' via dominance
+                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(151) : see declaration of 'Sprite_move::update'
      1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite_text.cpp(16): error C2572: 'Sprite_text::Sprite_text' : redefinition of default parameter : parameter 9
-                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(200) : see declaration of 'Sprite_text::Sprite_text'
+                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(213) : see declaration of 'Sprite_text::Sprite_text'
      1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite_text.cpp(16): error C2572: 'Sprite_text::Sprite_text' : redefinition of default parameter : parameter 8
-                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(200) : see declaration of 'Sprite_text::Sprite_text'
+                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(213) : see declaration of 'Sprite_text::Sprite_text'
      1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite_text.cpp(21): error C2614: 'Sprite_text' : illegal member initialization: 'solid' is not a base or member
+         Sprite_rot.cpp
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\camera.h(21): error C2653: 'physics' : is not a class or namespace name
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\camera.h(21): error C2146: syntax error : missing ';' before identifier 'vel'
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\camera.h(21): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\stage.h(16): error C2065: 'Sprite_base' : undeclared identifier
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\stage.h(16): error C2059: syntax error : '>'
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\stage.h(16): error C2976: 'std::vector' : too few template arguments
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\vector(650) : see declaration of 'std::vector'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\vector(650) : see declaration of 'std::vector'
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\stage.h(19): error C2065: 'Sprite_base' : undeclared identifier
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\stage.h(19): error C2923: 'std::unique_ptr' : 'Sprite_base' is not a valid template type argument for parameter '_Ty'
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\stage.h(19): error C3203: 'unique_ptr' : unspecialized class template can't be used as a template argument for template parameter '_Ty', expected a real type
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\canvas.h(46): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\canvas.h(46): error C2143: syntax error : missing ',' before '&'
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(156): warning C4244: '+=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(157): warning C4244: '+=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(178): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(178): warning C4183: 'Sprite_scale': missing return type; assumed to be a member function returning 'int'
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(189): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(189): warning C4183: 'Sprite_scale': missing return type; assumed to be a member function returning 'int'
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(239): error C2143: syntax error : missing ')' before ';'
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(248): warning C4250: 'Sprite_final' : inherits 'Sprite_move::Sprite_move::update' via dominance
+                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(151) : see declaration of 'Sprite_move::update'
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite_rot.cpp(13): error C2511: 'Sprite_rot::Sprite_rot(const std::string &,const std::vector<SDL_Rect,std::allocator<_Ty>> &,int,int,const SDL_Point &,double,SDL_RendererFlip,bool,unsigned short)' : overloaded member function not found in 'Sprite_rot'
+                 with
+                 [
+                     _Ty=SDL_Rect
+                 ]
+                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(166) : see declaration of 'Sprite_rot'
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite_rot.cpp(17): error C2550: 'Sprite_rot::{ctor}' : constructor initializer lists are only allowed on constructor definitions
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite_rot.cpp(31): error C2511: 'Sprite_rot::Sprite_rot(const std::string &,unsigned int,unsigned int,int,int,const SDL_Point &,double,SDL_RendererFlip,bool,unsigned short)' : overloaded member function not found in 'Sprite_rot'
+                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(166) : see declaration of 'Sprite_rot'
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite_rot.cpp(35): error C2550: 'Sprite_rot::{ctor}' : constructor initializer lists are only allowed on constructor definitions
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite_rot.cpp(41): error C2664: 'void Canvas::copyEx(const int)' : cannot convert argument 1 from 'Sprite_rot' to 'const int'
+                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
          Sprite_final.cpp
      1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\camera.h(21): error C2653: 'physics' : is not a class or namespace name
      1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\camera.h(21): error C2146: syntax error : missing ';' before identifier 'vel'
@@ -195,17 +92,71 @@
      1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\stage.h(19): error C3203: 'unique_ptr' : unspecialized class template can't be used as a template argument for template parameter '_Ty', expected a real type
      1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\canvas.h(46): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
      1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\canvas.h(46): error C2143: syntax error : missing ',' before '&'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(145): warning C4244: '+=' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(146): warning C4244: '+=' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(167): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(167): warning C4183: 'Sprite_scale': missing return type; assumed to be a member function returning 'int'
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(156): warning C4244: '+=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(157): warning C4244: '+=' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(178): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
      1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(178): warning C4183: 'Sprite_scale': missing return type; assumed to be a member function returning 'int'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(225): error C2143: syntax error : missing ')' before ';'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(234): warning C4250: 'Sprite_final' : inherits 'Sprite_move::Sprite_move::update' via dominance
-                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(140) : see declaration of 'Sprite_move::update'
-         main.cpp
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\main.cpp(1): fatal error C1083: Cannot open include file: 'Sprite.h': No such file or directory
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(189): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(189): warning C4183: 'Sprite_scale': missing return type; assumed to be a member function returning 'int'
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(239): error C2143: syntax error : missing ')' before ';'
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(248): warning C4250: 'Sprite_final' : inherits 'Sprite_move::Sprite_move::update' via dominance
+                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(151) : see declaration of 'Sprite_move::update'
+         Sprite_bounds.cpp
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\camera.h(21): error C2653: 'physics' : is not a class or namespace name
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\camera.h(21): error C2146: syntax error : missing ';' before identifier 'vel'
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\camera.h(21): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\stage.h(16): error C2065: 'Sprite_base' : undeclared identifier
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\stage.h(16): error C2059: syntax error : '>'
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\stage.h(16): error C2976: 'std::vector' : too few template arguments
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\vector(650) : see declaration of 'std::vector'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\vector(650) : see declaration of 'std::vector'
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\stage.h(19): error C2065: 'Sprite_base' : undeclared identifier
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\stage.h(19): error C2923: 'std::unique_ptr' : 'Sprite_base' is not a valid template type argument for parameter '_Ty'
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\stage.h(19): error C3203: 'unique_ptr' : unspecialized class template can't be used as a template argument for template parameter '_Ty', expected a real type
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\canvas.h(46): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\canvas.h(46): error C2143: syntax error : missing ',' before '&'
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(156): warning C4244: '+=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(157): warning C4244: '+=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(178): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(178): warning C4183: 'Sprite_scale': missing return type; assumed to be a member function returning 'int'
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(189): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(189): warning C4183: 'Sprite_scale': missing return type; assumed to be a member function returning 'int'
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(239): error C2143: syntax error : missing ')' before ';'
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(248): warning C4250: 'Sprite_final' : inherits 'Sprite_move::Sprite_move::update' via dominance
+                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(151) : see declaration of 'Sprite_move::update'
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite_bounds.cpp(8): error C3867: 'std::_Tree<std::_Tmap_traits<_Kty,_Ty,_Pr,_Alloc,false>>::cbegin': function call missing argument list; use '&std::_Tree<std::_Tmap_traits<_Kty,_Ty,_Pr,_Alloc,false>>::cbegin' to create a pointer to member
+                 with
+                 [
+                     _Kty=std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<SDL_Rect>>>
+         ,            _Ty=SDL_Rect
+         ,            _Pr=std::less<std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<SDL_Rect>>>>
+         ,            _Alloc=std::allocator<std::pair<const std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<SDL_Rect>>>,SDL_Rect>>
+                 ]
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite_bounds.cpp(8): error C2143: syntax error : missing ';' before ')'
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite_bounds.cpp(9): error C2143: syntax error : missing ';' before '}'
+         Sprite_base.cpp
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\camera.h(21): error C2653: 'physics' : is not a class or namespace name
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\camera.h(21): error C2146: syntax error : missing ';' before identifier 'vel'
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\camera.h(21): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\stage.h(16): error C2065: 'Sprite_base' : undeclared identifier
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\stage.h(16): error C2059: syntax error : '>'
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\stage.h(16): error C2976: 'std::vector' : too few template arguments
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\vector(650) : see declaration of 'std::vector'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\vector(650) : see declaration of 'std::vector'
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\stage.h(19): error C2065: 'Sprite_base' : undeclared identifier
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\stage.h(19): error C2923: 'std::unique_ptr' : 'Sprite_base' is not a valid template type argument for parameter '_Ty'
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\stage.h(19): error C3203: 'unique_ptr' : unspecialized class template can't be used as a template argument for template parameter '_Ty', expected a real type
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\canvas.h(46): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\canvas.h(46): error C2143: syntax error : missing ',' before '&'
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(156): warning C4244: '+=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(157): warning C4244: '+=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(178): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(178): warning C4183: 'Sprite_scale': missing return type; assumed to be a member function returning 'int'
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(189): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(189): warning C4183: 'Sprite_scale': missing return type; assumed to be a member function returning 'int'
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(239): error C2143: syntax error : missing ')' before ';'
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(248): warning C4250: 'Sprite_final' : inherits 'Sprite_move::Sprite_move::update' via dominance
+                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(151) : see declaration of 'Sprite_move::update'
          Canvas.cpp
      1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\camera.h(21): error C2653: 'physics' : is not a class or namespace name
      1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\camera.h(21): error C2146: syntax error : missing ';' before identifier 'vel'
@@ -218,42 +169,21 @@
      1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\stage.h(19): error C2065: 'Sprite_base' : undeclared identifier
      1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\stage.h(19): error C2923: 'std::unique_ptr' : 'Sprite_base' is not a valid template type argument for parameter '_Ty'
      1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\stage.h(19): error C3203: 'unique_ptr' : unspecialized class template can't be used as a template argument for template parameter '_Ty', expected a real type
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(145): warning C4244: '+=' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(146): warning C4244: '+=' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(167): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(167): warning C4183: 'Sprite_scale': missing return type; assumed to be a member function returning 'int'
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(156): warning C4244: '+=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(157): warning C4244: '+=' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(178): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
      1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(178): warning C4183: 'Sprite_scale': missing return type; assumed to be a member function returning 'int'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(225): error C2143: syntax error : missing ')' before ';'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(234): warning C4250: 'Sprite_final' : inherits 'Sprite_move::Sprite_move::update' via dominance
-                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(140) : see declaration of 'Sprite_move::update'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\canvas.h(46): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\canvas.h(46): error C2143: syntax error : missing ',' before '&'
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(189): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(189): warning C4183: 'Sprite_scale': missing return type; assumed to be a member function returning 'int'
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(239): error C2143: syntax error : missing ')' before ';'
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(248): warning C4250: 'Sprite_final' : inherits 'Sprite_move::Sprite_move::update' via dominance
+                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(151) : see declaration of 'Sprite_move::update'
      1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\canvas.cpp(15): error C2374: 'UPS' : redefinition; multiple initialization
                  c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\canvas.h(25) : see declaration of 'UPS'
      1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\canvas.cpp(16): error C2374: 'INTERVAL' : redefinition; multiple initialization
                  c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\canvas.h(26) : see declaration of 'INTERVAL'
      1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\canvas.cpp(17): error C2374: 'MAX_FRAMESKIP' : redefinition; multiple initialization
                  c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\canvas.h(27) : see declaration of 'MAX_FRAMESKIP'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\canvas.cpp(105): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\canvas.cpp(105): error C2143: syntax error : missing ',' before '&'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\canvas.cpp(107): error C2065: 'sprite' : undeclared identifier
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\canvas.cpp(107): error C2228: left of '.currentClip' must have class/struct/union
-                 type is 'unknown-type'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\canvas.cpp(108): error C2065: 'sprite' : undeclared identifier
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\canvas.cpp(108): error C2228: left of '.dest' must have class/struct/union
-                 type is 'unknown-type'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\canvas.cpp(110): error C2065: 'sprite' : undeclared identifier
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\canvas.cpp(110): error C2228: left of '.texture' must have class/struct/union
-                 type is 'unknown-type'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\canvas.cpp(110): error C2228: left of '.get' must have class/struct/union
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\canvas.cpp(110): error C2228: left of '.rotAngle' must have class/struct/union
-                 type is 'unknown-type'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\canvas.cpp(110): error C2228: left of '.rotPoint' must have class/struct/union
-                 type is 'unknown-type'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\canvas.cpp(110): error C2228: left of '.flip' must have class/struct/union
-                 type is 'unknown-type'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\canvas.cpp(110): error C2660: 'SDL_RenderCopyEx' : function does not take 3 arguments
          Camera.cpp
      1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\stage.h(16): error C2065: 'Sprite_base' : undeclared identifier
      1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\stage.h(16): error C2059: syntax error : '>'
@@ -263,20 +193,20 @@
      1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\stage.h(19): error C2065: 'Sprite_base' : undeclared identifier
      1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\stage.h(19): error C2923: 'std::unique_ptr' : 'Sprite_base' is not a valid template type argument for parameter '_Ty'
      1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\stage.h(19): error C3203: 'unique_ptr' : unspecialized class template can't be used as a template argument for template parameter '_Ty', expected a real type
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(145): warning C4244: '+=' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(146): warning C4244: '+=' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(167): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(167): warning C4183: 'Sprite_scale': missing return type; assumed to be a member function returning 'int'
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(156): warning C4244: '+=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(157): warning C4244: '+=' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(178): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
      1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(178): warning C4183: 'Sprite_scale': missing return type; assumed to be a member function returning 'int'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(225): error C2143: syntax error : missing ')' before ';'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(234): warning C4250: 'Sprite_final' : inherits 'Sprite_move::Sprite_move::update' via dominance
-                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(140) : see declaration of 'Sprite_move::update'
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\canvas.h(46): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\canvas.h(46): error C2143: syntax error : missing ',' before '&'
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(189): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(189): warning C4183: 'Sprite_scale': missing return type; assumed to be a member function returning 'int'
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(239): error C2143: syntax error : missing ')' before ';'
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(248): warning C4250: 'Sprite_final' : inherits 'Sprite_move::Sprite_move::update' via dominance
+                 c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\render\sprite.h(151) : see declaration of 'Sprite_move::update'
+         main.cpp
+     1>c:\users\psiic_000\documents\github\sdl-thingy\src\sdl_test\main.cpp(1): fatal error C1083: Cannot open include file: 'Sprite.h': No such file or directory
          Generating Code...
      1>Done Building Project "C:\Users\psiic_000\Documents\GitHub\SDL-thingy\src\SDL_test\SDL_test.vcxproj" (Build target(s)) -- FAILED.
 
 Build FAILED.
 
-Time Elapsed 00:00:05.27
+Time Elapsed 00:00:12.52

@@ -21,15 +21,15 @@ namespace physics
 	};
 }
 
-struct Quad
+struct rectQuad
 {
-	Quad(int tl, int br) : tl(tl), br(br) {}
+	rectQuad(int tl, int br) : tl(tl), br(br) {}
 
 	int tl, br;
 };
 
 //abstract base sprite class
-//contains texture ptr, vector of clips (source rects), and destination rects - all ready for rendering
+//doesn't rotate or move
 class Sprite_base
 {
 	friend class Canvas;
@@ -40,15 +40,17 @@ public:
 				const std::vector<SDL_Rect>& clips, 
 				int pos_x, 
 				int pos_y, 
+				const std::map<uint, SDL_Rect>& bounds = std::map<uint, SDL_Rect>(),
 				bool solid = true, 
 				ushort z = 0);
 
-	//plain sprite constructor
+	//single-frame sprite constructor
 	Sprite_base(const std::string& filename, 
 				uint w, 
 				uint h, 
 				int pos_x, 
 				int pos_y, 
+				const std::map<uint, SDL_Rect>& bounds = std::map<uint, SDL_Rect>(),
 				bool solid = true, 
 				ushort z = 0);
 
@@ -57,24 +59,21 @@ public:
 		//unique_ptr destroys texture automatically, ya goof
 	}
 
-	//basic collision function uses borderRect
-	//override in derived types that use more complicated collision detection
-	//accepts vector of rects
+	//basic collision function
+	//override in derived types that use more complicated collision detection (e.g. w/ rotation)
 	virtual bool checkCollide(const std::vector<SDL_Rect>& collisionRects);
+
+	virtual void update(uint deltaTicks) = 0;
 
 	//basic draw function
 	//override when rotation/interpolation are needed
 	virtual void draw(double interpolation);
 
-	virtual void update(uint deltaTicks) = 0;
-
-	std::vector<SDL_Rect>::const_iterator currentClip;
-
-	std::map<std::vector<SDL_Rect>::const_iterator, SDL_Rect>::const_iterator currentBorderRect;
-
-	SDL_Rect translatedBorderRect;
+	std::vector<SDL_Rect>::const_iterator clipCurrent;
+	std::map<std::vector<SDL_Rect>::const_iterator, SDL_Rect>::const_iterator boundsCurrent;
 
 	SDL_Rect dest;
+
 
 protected:
 	//default constructor
@@ -85,42 +84,14 @@ protected:
 	std::unique_ptr <SDL_Surface, void (*)(SDL_Surface*)> surface;
 
 	std::vector<SDL_Rect> clips;
+	std::map<std::vector<SDL_Rect>::const_iterator, SDL_Rect> bounds;
 
-	//borderRects for each spritesheet clip
-	std::map<std::vector<SDL_Rect>::const_iterator, SDL_Rect> borderRects;
-
-	//depth variable; bigger goes on top
+	//bigger z goes on top
 	ushort z;
-
 	bool solid;
 
 	std::string filename;
 	uint numClips;
-};
-
-//class for sprites with bounding rectangles
-class Sprite_bounds : virtual public Sprite_base
-{
-public:
-	//map of bounding rectangles
-	//k: clip, v: bounds
-	typedef std::map<std::vector<SDL_Rect>::const_iterator, SDL_Rect> boundRect_map;
-
-	Sprite_bounds(const std::string& filename, const std::vector<SDL_Rect>& clips, int pos_x, int pos_y, const boundRect_map& bounds, bool solid = true, ushort z = 0) : Sprite_base(filename, clips, pos_x, pos_y, solid, z), bounds(bounds), currentBounds(this->bounds.cbegin())
-	{
-		//ok
-	}
-	Sprite_bounds(const std::string& filename, uint w, uint h, int pos_x, int pos_y, const boundRect_map& bounds, bool solid = true, ushort z = 0) : Sprite_base(filename, w, h, pos_x, pos_y, solid, z), bounds(bounds), currentBounds(this->bounds.cbegin())
-	{
-		//ok
-	}
-	
-	boundRect_map::const_iterator currentBounds;
-
-	virtual bool checkCollide(const std::vector<SDL_Rect>& collisionRects);
-
-protected:
-	boundRect_map bounds;
 };
 
 //class with velocity physics::vector

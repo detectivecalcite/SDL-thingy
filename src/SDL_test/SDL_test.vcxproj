@@ -83,15 +83,14 @@
     <ClCompile Include="render\Sprite_final.cpp" />
     <ClCompile Include="render\Sprite_text.cpp" />
     <ClCompile Include="render\Sprite_base.cpp" />
-    <ClCompile Include="render\Sprite_bounds.cpp" />
     <ClCompile Include="render\Sprite_move.cpp" />
     <ClCompile Include="render\Sprite_rot.cpp" />
     <ClCompile Include="render\Stage.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GameEntity.h" />
     <ClInclude Include="render\Camera.h" />
     <ClInclude Include="render\Canvas.h" />
+    <ClInclude Include="render\GameEntity.h" />
     <ClInclude Include="render\Sprite.h" />
     <ClInclude Include="render\Stage.h" />
     <ClInclude Include="render\Top.h" />

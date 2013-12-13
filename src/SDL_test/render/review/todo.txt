@@ -1,11 +1,29 @@
 TODO
 -get rid of Top.h and do individual includes
 
--translate rects for classes that support rotation
+-get rid of Sprite_bounds and just have one vector of bounds in Sprite_base
+	-make providing bounds optional
+	-init bounds in Sprite_base
+	-add collision circle to Sprite_base
 
--final checkCollide function will need to be multiple rects **and** rotation
-	-implement axis-based point collision
-
--update functions have to keep collision rects updated along the clip sheet
+-make checkCollide for all the sprite classes
+	-incremental detection
+	-rotatable quads
+	-pruning
+		-is this affordable?
 
 -make Stage hold GameEntity objects
+
+________________________________________________________________________________________________________________________________
+COLLISION DETECTION
+here's the plan:
+
+bounding rects for sprites that support rotation are made into rotatable quads at creation
+dest only serves as a generic offset rectangle
+rotate all points in all of a sprite's bounds in update()
+draw using dest and the rotation point and offset
+collision detection will use pre-rotated quads
+
+1. use circles first; if this is false, stop trying
+2. then use border rect; if this is false, stop trying
+3. then use bound rects if the class has 'em (make this shit optional)

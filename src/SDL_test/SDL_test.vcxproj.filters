@@ -48,9 +48,6 @@
     <ClCompile Include="render\Sprite_base.cpp">
       <Filter>Source Files\implem\render\Sprite</Filter>
     </ClCompile>
-    <ClCompile Include="render\Sprite_bounds.cpp">
-      <Filter>Source Files\implem\render\Sprite</Filter>
-    </ClCompile>
     <ClCompile Include="render\Sprite_move.cpp">
       <Filter>Source Files\implem\render\Sprite</Filter>
     </ClCompile>
@@ -80,7 +77,7 @@
     <ClInclude Include="render\Top.h">
       <Filter>Header Files\render</Filter>
     </ClInclude>
-    <ClInclude Include="GameEntity.h">
+    <ClInclude Include="render\GameEntity.h">
       <Filter>Header Files\render</Filter>
     </ClInclude>
   </ItemGroup>

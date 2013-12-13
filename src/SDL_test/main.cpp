@@ -1,5 +1,5 @@
-#include "Sprite.h"
-#include "Canvas.h"
+#include "render\Sprite.h"
+#include "render\Canvas.h"
 using namespace std;
 
 int main(int argc, char *argv[])
@@ -7,6 +7,7 @@ int main(int argc, char *argv[])
 	try
 	{
 		Canvas::init("SDL", 1280, 1024);
+
 	}
 	catch (runtime_error err)
 	{
