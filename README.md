@@ -8,3 +8,5 @@ An SDL engine and (eventually) game. Lots of change expected here.
 to be added pretty soon:
 * separating-axis collision detection (for both rotating and axis-bound boxes)
 * actual game loop (thread later)
+
+4/18/14 - this is probably not happening anymore
